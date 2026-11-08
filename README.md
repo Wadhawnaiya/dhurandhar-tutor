@@ -24,7 +24,7 @@ your material on your disk, and talks to whichever model provider you configure.
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/sign-in-light.png" alt="Dhurandhar Tutor sign-in screen" width="880">
+  <img src="assets/figs/screenshots/sign-in-light.png" alt="Dhurandhar Tutor sign-in screen" width="880">
 </p>
 
 ## Why it feels different
