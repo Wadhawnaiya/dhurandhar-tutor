@@ -128,7 +128,14 @@ export default function AppShell({ sidebar, pageBar, children, homeHref = "/" }:
                 alt="Dhurandhar Tutor"
                 width={1600}
                 height={320}
-                className="h-[18px] w-auto"
+                className="h-[18px] w-auto dark:hidden"
+              />
+              <Image
+                src="/brand/word-on-dark.png"
+                alt=""
+                width={1600}
+                height={320}
+                className="hidden h-[18px] w-auto dark:block"
               />
             </Link>
           </div>

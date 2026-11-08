@@ -269,7 +269,15 @@ export function ClassicSidebarShell({
             width={1600}
             height={320}
             priority
-            className="h-[22px] w-auto transition-transform duration-200 group-hover:scale-105"
+            className="h-[22px] w-auto transition-transform duration-200 group-hover:scale-105 dark:hidden"
+          />
+          <Image
+            src="/brand/word-on-dark.png"
+            alt=""
+            width={1600}
+            height={320}
+            priority
+            className="hidden h-[22px] w-auto transition-transform duration-200 group-hover:scale-105 dark:block"
           />
         </Link>
         {/* The rail is a desktop affordance; in the drawer the scrim and the

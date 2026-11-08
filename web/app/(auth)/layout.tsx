@@ -33,12 +33,12 @@ export default function AuthLayout({
             className="h-11 w-11 rounded-[12px] shadow-[0_10px_30px_-12px_rgba(242,107,29,0.8)]"
           />
           <Image
-            src="/brand/black-word.png"
+            src="/brand/word-on-dark.png"
             alt="Dhurandhar Tutor"
             width={1600}
             height={320}
             priority
-            className="h-[24px] w-auto brightness-0 invert"
+            className="h-[24px] w-auto"
           />
         </Link>
 
