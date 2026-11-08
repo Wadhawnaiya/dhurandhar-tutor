@@ -23,6 +23,10 @@ your material on your disk, and talks to whichever model provider you configure.
   <img src="assets/figs/system/system-architecture.svg" alt="Dhurandhar Tutor architecture" width="880">
 </p>
 
+<p align="center">
+  <img src="docs/screenshots/sign-in-light.png" alt="Dhurandhar Tutor sign-in screen" width="880">
+</p>
+
 ## Why it feels different
 
 - **It remembers.** Sessions build a layered memory — traces, facts, and
