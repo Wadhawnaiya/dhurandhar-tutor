@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "books",
+  "distribution": "dhurandhar-books",
+  "requires": [
+    "knowledge",
+    "parsing",
+    "questions",
+    "visualize",
+    "mastery"
+  ],
+  "optional": [
+    "notebook",
+    "renderer-manim"
+  ],
+  "paths": [
+    "dhurandhar/book",
+    "dhurandhar_cli/book.py",
+    "dhurandhar/api/routers/book.py",
+    "dhurandhar/multi_user/book_access.py"
+  ],
+  "capabilities": {},
+  "loops": {},
+  "tools": {},
+  "routes": [
+    {
+      "reference": "dhurandhar.api.routers.book:router",
+      "options": {
+        "prefix": "/api",
+        "tags": [
+          "books"
+        ]
+      },
+      "auth": "learning",
+      "order": 646
+    },
+    {
+      "reference": "dhurandhar.api.routers.book:ws_router",
+      "options": {
+        "prefix": "/ws",
+        "tags": [
+          "books"
+        ]
+      },
+      "auth": "public",
+      "order": 649
+    }
+  ],
+  "commands": [
+    {
+      "name": "book",
+      "register": "dhurandhar_cli.book:register",
+      "help": "Manage book."
+    }
+  ],
+  "navigation": [
+    "/books",
+    "/learning/books"
+  ],
+  "services": [],
+  "requirements": [],
+  "executables": [],
+  "http_paths": [
+    "/api/multi-user/admin/books"
+  ]
+}

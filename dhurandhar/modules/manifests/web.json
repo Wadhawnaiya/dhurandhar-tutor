@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "web",
+  "distribution": "dhurandhar-web",
+  "requires": [
+    "server"
+  ],
+  "optional": [],
+  "paths": [
+    "dhurandhar_web"
+  ],
+  "capabilities": {},
+  "loops": {},
+  "tools": {},
+  "routes": [],
+  "commands": [],
+  "navigation": [],
+  "services": [],
+  "requirements": [],
+  "executables": []
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "notebook",
+  "distribution": "dhurandhar-notebook",
+  "requires": [],
+  "optional": [],
+  "paths": [
+    "dhurandhar/services/notebook",
+    "dhurandhar_cli/notebook.py",
+    "dhurandhar/api/routers/notebook.py"
+  ],
+  "capabilities": {},
+  "loops": {},
+  "tools": {
+    "list_notebook": {
+      "class_path": "dhurandhar.tools.builtin:ListNotebookTool",
+      "order": 18
+    },
+    "list_favorites": {
+      "class_path": "dhurandhar.tools.builtin:ListFavoritesTool",
+      "order": 19
+    },
+    "save_favorite": {
+      "class_path": "dhurandhar.tools.builtin:SaveFavoriteTool",
+      "order": 20
+    }
+  },
+  "routes": [
+    {
+      "reference": "dhurandhar.api.routers.notebook:router",
+      "options": {
+        "prefix": "/api",
+        "tags": [
+          "notebooks"
+        ]
+      },
+      "auth": "learning",
+      "order": 631
+    }
+  ],
+  "commands": [
+    {
+      "name": "notebook",
+      "register": "dhurandhar_cli.notebook:register",
+      "help": "Manage notebook."
+    }
+  ],
+  "navigation": [
+    "/notebooks",
+    "/learning/practice"
+  ],
+  "services": [],
+  "requirements": [],
+  "executables": []
+}

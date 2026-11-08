@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "memory",
+  "distribution": "dhurandhar-memory",
+  "requires": [],
+  "optional": [],
+  "paths": [
+    "dhurandhar/services/memory",
+    "dhurandhar_cli/memory.py",
+    "dhurandhar/api/routers/memory.py",
+    "dhurandhar/agents/loop/native_memory.py"
+  ],
+  "capabilities": {},
+  "loops": {},
+  "tools": {
+    "read_memory": {
+      "class_path": "dhurandhar.tools.builtin:ReadMemoryTool",
+      "order": 13
+    },
+    "write_memory": {
+      "class_path": "dhurandhar.tools.builtin:WriteMemoryTool",
+      "order": 14
+    }
+  },
+  "routes": [
+    {
+      "reference": "dhurandhar.api.routers.memory:router",
+      "options": {
+        "prefix": "/api/memory",
+        "tags": [
+          "memory"
+        ]
+      },
+      "auth": "learning",
+      "order": 662
+    }
+  ],
+  "commands": [
+    {
+      "name": "memory",
+      "register": "dhurandhar_cli.memory:register",
+      "help": "Manage memory."
+    }
+  ],
+  "navigation": [
+    "/memory"
+  ],
+  "services": [],
+  "requirements": [],
+  "executables": []
+}

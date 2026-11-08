@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "calendar",
+  "distribution": "dhurandhar-calendar",
+  "requires": [],
+  "optional": [
+    "mastery",
+    "partners"
+  ],
+  "paths": [
+    "dhurandhar/services/calendar",
+    "dhurandhar/services/cron",
+    "dhurandhar/api/routers/calendar.py",
+    "dhurandhar/tools/cron_tool.py"
+  ],
+  "capabilities": {},
+  "loops": {},
+  "tools": {
+    "cron": {
+      "class_path": "dhurandhar.tools.builtin:CronTool",
+      "order": 24
+    }
+  },
+  "routes": [
+    {
+      "reference": "dhurandhar.api.routers.calendar:router",
+      "options": {
+        "prefix": "/api/calendar",
+        "tags": [
+          "calendar"
+        ]
+      },
+      "auth": "learning",
+      "order": 640
+    }
+  ],
+  "commands": [],
+  "navigation": [
+    "/calendar"
+  ],
+  "services": [
+    {
+      "id": "cron",
+      "start": "dhurandhar.services.cron.module_service:start_cron",
+      "stop": "dhurandhar.services.cron.module_service:stop_cron"
+    }
+  ],
+  "requirements": [
+    "croniter>=6.0.0,<7.0.0",
+    "python-dateutil>=2.9.0,<3.0.0"
+  ],
+  "executables": []
+}

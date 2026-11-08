@@ -1,0 +1,37 @@
+[importlinter]
+root_package = dhurandhar
+
+[importlinter:contract:core-purity]
+name = Core contains values and protocols only
+type = forbidden
+source_modules =
+    dhurandhar.core
+forbidden_modules =
+    dhurandhar.app
+    dhurandhar.api
+    dhurandhar.runtime
+    dhurandhar.services
+
+[importlinter:contract:no-api-backimports]
+name = Runtime and service layers do not import API adapters
+type = forbidden
+source_modules =
+    dhurandhar.runtime
+    dhurandhar.services
+    dhurandhar.knowledge
+    dhurandhar.learning
+    dhurandhar.multi_user
+    dhurandhar.capabilities
+    dhurandhar.agents
+forbidden_modules =
+    dhurandhar.api
+ignore_imports =
+    dhurandhar.learning.tests.** -> dhurandhar.api.**
+
+[importlinter:contract:app-adapter-direction]
+name = Application does not import API adapters
+type = forbidden
+source_modules =
+    dhurandhar.app
+forbidden_modules =
+    dhurandhar.api

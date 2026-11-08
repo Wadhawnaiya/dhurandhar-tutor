@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use Dhurandhar Tutor in your work, cite this repository."
+title: "Dhurandhar Tutor"
+type: software
+license: Apache-2.0
+version: 1.0.0
+date-released: "2026-11-08"
+repository-code: "https://github.com/Wadhawnaiya/dhurandhar-tutor"
+abstract: >-
+  A local-first study workspace where an agent reads with you, remembers what
+  you covered, and keeps chat, notes, practice, and reading in one pane.
+authors:
+  - alias: Wadhawnaiya
+    name: "Wadhawnaiya"

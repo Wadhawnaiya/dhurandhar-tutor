@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "visualize",
+  "distribution": "dhurandhar-visualize",
+  "requires": [],
+  "optional": [
+    "renderer-manim"
+  ],
+  "paths": [
+    "dhurandhar/agents/visualize",
+    "dhurandhar/visualizers",
+    "dhurandhar/api/routers/visualizers.py"
+  ],
+  "capabilities": {
+    "visualize": {
+      "class_path": "dhurandhar.agents.visualize.capability:VisualizeCapability",
+      "config_model": "dhurandhar.runtime.request_contracts:VisualizeRequestConfig",
+      "manifest": {
+        "name": "visualize",
+        "description": "Generate a validated visualization with any installed visualizer type, or render a Manim animation/storyboard artifact.",
+        "stages": [
+          "analyzing",
+          "generating",
+          "reviewing",
+          "concept_analysis",
+          "concept_design",
+          "code_generation",
+          "code_retry",
+          "summary",
+          "render_output"
+        ],
+        "tools_used": [
+          "submit_visualization"
+        ],
+        "cli_aliases": [
+          "visualize",
+          "viz"
+        ],
+        "config_defaults": {
+          "enable_visual_review": false
+        }
+      },
+      "order": 7
+    }
+  },
+  "loops": {
+    "visualization_generation": {
+      "class_path": "dhurandhar.visualizers.loop_capability:VisualizationLoopCapability"
+    }
+  },
+  "tools": {
+    "submit_visualization": {
+      "class_path": "dhurandhar.visualizers.tool:SubmitVisualizationTool",
+      "order": 37
+    }
+  },
+  "routes": [
+    {
+      "reference": "dhurandhar.api.routers.visualizers:router",
+      "options": {
+        "prefix": "/api/visualizers",
+        "tags": [
+          "visualizers"
+        ]
+      },
+      "auth": "learning",
+      "order": 784
+    }
+  ],
+  "commands": [],
+  "navigation": [],
+  "services": [],
+  "requirements": [],
+  "executables": []
+}

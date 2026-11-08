@@ -1,0 +1,29 @@
+{
+  "name": "dhurandhar-tutor-desktop",
+  "productName": "Dhurandhar Tutor",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Dhurandhar Tutor for macOS and Windows: the local runtime in a native window",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "src/main.mjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "icon": "swift scripts/make-icon.swift assets/mark.png assets/icon.icns && node scripts/make-ico.mjs assets/icon.icns assets/icon.ico",
+    "build:runtime": "node scripts/build-runtime.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "package": "node scripts/package.mjs"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "electron": "45.1.0"
+  },
+  "overrides": {
+    "@electron/asar": {
+      "glob": "14.0.2",
+      "minimatch": "11.0.1"
+    }
+  }
+}
